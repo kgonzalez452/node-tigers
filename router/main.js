@@ -29,4 +29,8 @@ module.exports = function(app, tigers) {
     tigers.splice(req.query.pos, 1);
     res.redirect("/");
   });
+
+  app.get('/get-tigers', function (req, res) {
+    res.json({ tigers: tigers });
+  });
 };
